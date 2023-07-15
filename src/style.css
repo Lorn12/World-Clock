@@ -1,3 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f7fe;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 37.5em;
+  margin: 3.75em auto;
+  padding: 1.875em;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.75rem;
+}
+
+/* Select Dropdown *********************************************************************************************************************/
+select {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Cities/Date/Time Section *********************************************************************************************************************/
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 25px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.city:last-child {
+  border: none;
+}
+
+.date {
+  opacity: 0.5;
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 18px;
+  vertical-align: middle;
+  line-height: 48px;
+}
+
+/* Footer Section *********************************************************************************************************************/
 footer {
   text-align: center;
 }
