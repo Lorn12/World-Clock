@@ -4,8 +4,11 @@ let selectCities = document.getElementById("select-city");
 selectCities.addEventListener("change", changeCities);
 
 function changeCities(e) {
-  //variables
   let cityTimeZone = e.target.value;
+  //Conditionals
+  if (cityTimeZone === "reset") {
+    location.reload();
+  }
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
@@ -27,6 +30,7 @@ function changeCities(e) {
 //<!-- Cities/Date/Time____________________________________________________________________________________________________________ -->
 function updateTime(city, timezone) {
   let cityElement = document.getElementById(city);
+
   if (cityElement) {
     let cityDateElement = cityElement.querySelector(".date");
     let cityTimeElement = cityElement.querySelector(".time");
