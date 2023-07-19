@@ -1,3 +1,20 @@
+function updateCurrentTime() {
+  let date = document.querySelector(".curr-date");
+  let time = document.querySelector(".curr-time");
+  let city = document.querySelector(".curr-city");
+  let timezone = moment.tz.guess();
+
+  date.innerHTML = moment().tz(timezone).format("MMMM Do, YYYY");
+  time.innerHTML = moment().tz(timezone).format("h:mm:ss [<small>]A[</small>]");
+
+  // if (timezone === city) {
+  //   let cityName = timezone.replace("_", "").split("/")[1];
+  //   city.innerHTML = ` <h1 class="curr-city">${cityName}</h1>`;
+  // }
+}
+
+updateCurrentTime();
+setInterval(updateCurrentTime, 1000);
 //<!-- Select Dropdown____________________________________________________________________________________________________________ -->
 
 let selectCities = document.getElementById("select-city");

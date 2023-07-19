@@ -38,11 +38,17 @@ h1 {
   font-size: 3rem;
 }
 
-#current-time {
+#current {
   text-align: center;
   font-size: 5rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.date-time {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 3.4rem;
 }
 
 h2 {
