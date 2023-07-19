@@ -86,7 +86,8 @@ h2 {
   scroll-behavior: smooth;
   border-radius: 20px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px 5px 10px 0px rgba(31, 38, 135, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 
