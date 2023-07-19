@@ -1,16 +1,17 @@
+//<!-- Current Time/Location ____________________________________________________________________________________________________________ -->
 function updateCurrentTime() {
-  let date = document.querySelector(".curr-date");
-  let time = document.querySelector(".curr-time");
-  let city = document.querySelector(".curr-city");
+  let cityElement = document.querySelector(".curr-city");
+  let dateElement = document.querySelector(".curr-date");
+  let timeElement = document.querySelector(".curr-time");
   let timezone = moment.tz.guess();
 
-  date.innerHTML = moment().tz(timezone).format("MMMM Do, YYYY");
-  time.innerHTML = moment().tz(timezone).format("h:mm:ss [<small>]A[</small>]");
+  let cityName = timezone.replace("_", "").split("/")[1];
 
-  // if (timezone === city) {
-  //   let cityName = timezone.replace("_", "").split("/")[1];
-  //   city.innerHTML = ` <h1 class="curr-city">${cityName}</h1>`;
-  // }
+  cityElement.innerHTML = cityName;
+  dateElement.innerHTML = moment().tz(timezone).format("MMMM Do, YYYY");
+  timeElement.innerHTML = moment()
+    .tz(timezone)
+    .format("h:mm:ss [<small>]A[</small>]");
 }
 
 updateCurrentTime();
