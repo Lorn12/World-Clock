@@ -32,11 +32,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Current Time Section *********************************************************************************************************************/
 h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
 }
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.75rem;
+}
+
+/* Current Time Section *********************************************************************************************************************/
 
 #current {
   text-align: center;
@@ -48,20 +54,21 @@ h1 {
 .date-time {
   margin-top: 0;
   padding-top: 0;
-  font-size: 3.4rem;
+  font-size: 2.5rem;
 }
 
-h2 {
-  margin: 0 0 10px;
-  font-size: 1.75rem;
+.curr-time {
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 /* Select Dropdown *********************************************************************************************************************/
 
 .city-options {
+  font-family: "Poppins", sans-serif;
   display: block;
   width: 100%;
-  border: none;
+  border: transparent;
   outline: none;
   scroll-behavior: smooth;
   border-radius: 20px;
@@ -116,4 +123,22 @@ footer {
   color: #eee;
 }
 
-/*  */
+/*@ media***************************************************************************************************************************/
+@media (max-width: 936px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 550px) {
+  .city {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+}
