@@ -67,6 +67,15 @@ h2 {
 }
 
 /* Select Dropdown *********************************************************************************************************************/
+::selection {
+  color: none;
+  background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
 
 .city-options {
   font-family: "Poppins", sans-serif;
@@ -78,8 +87,7 @@ h2 {
   border-radius: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 15px 0 rgba(31, 38, 135, 0.8);
-  z-index: 10;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 
 .city-options option {
