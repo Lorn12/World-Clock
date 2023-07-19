@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,22 +7,40 @@
 }
 
 body {
-  background-color: #f9f7fe;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: url(https://i.ibb.co/M9LB3Kq/Glassmorphism-Background.png);
+  background-size: cover;
+  background-color: #eee;
+  overflow: hidden;
 }
 
 .container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.clock {
+  color: #23226b;
   max-width: 37.5em;
   margin: 3.75em auto;
   padding: 1.875em;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+/* Current Time Section *********************************************************************************************************************/
 h1 {
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 3rem;
+}
+
+#current-time {
+  text-align: center;
+  font-size: 5rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -33,11 +51,17 @@ h2 {
 }
 
 /* Select Dropdown *********************************************************************************************************************/
-select {
+
+.city-options {
   display: block;
   width: 100%;
-  border-radius: 4px;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  border-radius: 20px;
   padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
 }
 
 /* Cities/Date/Time Section *********************************************************************************************************************/
@@ -72,3 +96,18 @@ select {
 footer {
   text-align: center;
 }
+
+.repoLink {
+  text-decoration: none;
+  color: #ffad1c;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.repoLink:hover {
+  color: #eee;
+}
+
+/*  */

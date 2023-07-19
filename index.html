@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    
     <title>World Clock</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>World Clock</h1>
+      <div class="clock">
+      <div id="current-time">
+        <h1>World Clock</h1>
+        <span class="curr-time"></span>
+      </div>
+      <!-- <h1>World Clock</h1> -->
 <!-- Select Dropdown____________________________________________________________________________________________________________ -->
-      <form action="">
-      <select id="select-city">
+<select class="city-options" id="select-city">
         <option value="reset">✔ Select a City</option>
         <option value="current">Current Location</option>
         <option value="Europe/London">London</option>
@@ -22,7 +27,7 @@
         <option value="America/Monterrey">Monterrey</option>
         <option value="Africa/Cairo">Cairo</option>
       </select>
-    </form>
+  
 <!-- Cities/Date/Time____________________________________________________________________________________________________________ -->
   <div id="cities"> 
 <div class="city" id="los-angeles">
@@ -48,9 +53,7 @@
       </div>
     </div>   
       </div>
-    </div>
-    <!-- Footer Section____________________________________________________________________________________________________________ -->
-    <footer>
+       <footer>
       <a
         href="https://github.com/Lorn12/World-Clock"
         target="_blank"
@@ -59,6 +62,11 @@
         >G I T H U B &nbsp; R E P O S I T O R Y &nbsp; L I N K</a
       >&nbsp; C O D E D &nbsp; B Y : &nbsp;L A U R E N &nbsp; W O O T E N
     </footer>
+    </div>
+   
+    </div>
+    <!-- Footer Section____________________________________________________________________________________________________________ -->
+   
     <script src="src/app.js"></script>
   </body>
 </html>

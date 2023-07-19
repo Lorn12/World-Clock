@@ -1,4 +1,5 @@
 //<!-- Select Dropdown____________________________________________________________________________________________________________ -->
+
 let selectCities = document.getElementById("select-city");
 
 selectCities.addEventListener("change", changeCities);
@@ -47,5 +48,6 @@ function updateWorldTimes() {
   updateTime("seoul", "Asia/Seoul");
 }
 
+// updateCurrentTime();
 updateWorldTimes();
 setInterval(updateWorldTimes, 1000);
