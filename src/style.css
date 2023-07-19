@@ -49,12 +49,13 @@ h2 {
   font-size: 5rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .date-time {
   margin-top: 0;
   padding-top: 0;
-  font-size: 2.5rem;
+  font-size: 1.875rem;
 }
 
 .curr-date {
@@ -69,12 +70,14 @@ h2 {
 /* Select Dropdown *********************************************************************************************************************/
 ::selection {
   color: none;
-  background: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 /* For Mozilla Firefox */
 ::-moz-selection {
   color: none;
-  background: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 
 .city-options {
@@ -87,7 +90,6 @@ h2 {
   border-radius: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: inset 0px 5px 10px 0px rgba(31, 38, 135, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.4);
 }
 
