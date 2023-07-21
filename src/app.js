@@ -19,12 +19,12 @@ setInterval(updateCurrentTime, 1000);
 //<!-- Select Dropdown____________________________________________________________________________________________________________ -->
 
 let selectCities = document.getElementById("select-city");
+let cityIntervals = [];
 
 selectCities.addEventListener("change", changeCities);
 
 function changeCities(e) {
   let cityTimeZone = e.target.value;
-  //Conditionals
   if (cityTimeZone === "reset") {
     location.reload();
   }
@@ -33,17 +33,46 @@ function changeCities(e) {
   }
   let cityName = cityTimeZone.replace("_", "").split("/")[1];
   let cityTime = moment.tz(cityTimeZone);
-  //Selector
   let citiesElement = document.getElementById("cities");
 
-  citiesElement.innerHTML = `<div class="city">
-  <div>
-  <h2>${cityName}</h2>
-  <div class="date" id="">${cityTime.format("MMMM Do, YYYY")}</div>
-</div>
-  <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
-</div>
-`;
+  let newCity = document.createElement("div");
+  newCity.className = "city";
+  newCity.innerHTML = `
+      <div>
+          <h2>${cityName}</h2>
+          <div class="date" id="">${cityTime.format("MMMM Do, YYYY")}</div>
+      </div>
+      <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
+      <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+  `;
+
+  newCity.querySelector(".delete-btn").addEventListener("click", function () {
+    clearInterval(cityIntervals[newCity.id]);
+    newCity.remove();
+  });
+
+  citiesElement.appendChild(newCity);
+  newCity.style.opacity = "0"; // Ensure it starts as invisible
+
+  // Fade-in animation
+  let op = 0; // The initial opacity
+  let timer = setInterval(function () {
+    if (op > 1) {
+      clearInterval(timer);
+    }
+    newCity.style.opacity = op;
+    newCity.style.filter = "alpha(opacity=" + op * 100 + ")";
+    op += op * 0.1 || 0.1;
+  }, 10);
+
+  // Interval to update the appended city's time every second
+  cityIntervals[newCity.id] = setInterval(function () {
+    let cityTime = moment().tz(cityTimeZone);
+    newCity.querySelector(".date").innerHTML = cityTime.format("MMMM Do, YYYY");
+    newCity.querySelector(".time").innerHTML = cityTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }, 1000);
 }
 
 //<!-- Cities/Date/Time____________________________________________________________________________________________________________ -->
