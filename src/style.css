@@ -117,7 +117,7 @@ h2 {
 }
 
 .time {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -125,6 +125,23 @@ h2 {
   font-size: 18px;
   vertical-align: middle;
   line-height: 48px;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border: none;
+  background-color: transparent;
+  color: #27256e;
+  font-size: 18px;
+  cursor: pointer;
+  padding-right: 5px;
+  padding-bottom: 4px;
+}
+
+.fa-trash:hover {
+  color: #efd2f1;
 }
 
 /* Footer Section *********************************************************************************************************************/
