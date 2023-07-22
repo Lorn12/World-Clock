@@ -43,7 +43,7 @@ function changeCities(e) {
           <div class="date" id="">${cityTime.format("MMMM Do, YYYY")}</div>
       </div>
       <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
-      <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+      <button class="delete-btn"><i class="fa-solid fa-xmark"></i></button>
   `;
 
   newCity.querySelector(".delete-btn").addEventListener("click", function () {
@@ -83,6 +83,19 @@ function updateTime(city, timezone) {
     let cityDateElement = cityElement.querySelector(".date");
     let cityTimeElement = cityElement.querySelector(".time");
     let cityTime = moment().tz(timezone);
+    let deleteButton = cityElement.querySelector(".delete-btn");
+
+    // create delete button if it doesn't exist
+    if (!deleteButton) {
+      deleteButton = document.createElement("button");
+      deleteButton.classList.add("delete-btn");
+      deleteButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      deleteButton.addEventListener("click", function () {
+        clearInterval(cityIntervals[cityElement.id]);
+        cityElement.remove();
+      });
+      cityElement.appendChild(deleteButton);
+    }
 
     cityDateElement.innerHTML = cityTime.format("MMMM Do, YYYY");
     cityTimeElement.innerHTML = cityTime.format("h:mm:ss [<small>]A[</small>]");
