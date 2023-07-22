@@ -25,9 +25,12 @@ selectCities.addEventListener("change", changeCities);
 
 function changeCities(e) {
   let cityTimeZone = e.target.value;
+
+  //Resets the page/cities
   if (cityTimeZone === "reset") {
     location.reload();
   }
+  //Guesses your current time Zone depending on your location
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
@@ -85,7 +88,8 @@ function updateTime(city, timezone) {
     let cityTime = moment().tz(timezone);
     let deleteButton = cityElement.querySelector(".delete-btn");
 
-    // create delete button if it doesn't exist
+    // Create delete button if one doesn't exist
+    //(option to see full effect if you want button in absolute positioning in CSS. *take out relative positioning in .city*)
     if (!deleteButton) {
       deleteButton = document.createElement("button");
       deleteButton.classList.add("delete-btn");
