@@ -146,7 +146,7 @@ h2 {
 }
 
 .fa-xmark:hover {
-  color: #efd2f1;
+  color: #cbcbff;
 }
 
 /* Footer Section *********************************************************************************************************************/
@@ -157,7 +157,7 @@ footer {
 
 .repoLink {
   text-decoration: none;
-  color: #ffad1c;
+  color: #5e5ffa;
   display: block;
   align-items: center;
   justify-content: center;
