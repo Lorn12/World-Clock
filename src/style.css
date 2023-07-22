@@ -101,6 +101,7 @@ h2 {
 /* Cities/Date/Time Section *********************************************************************************************************************/
 
 .city {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
@@ -128,8 +129,8 @@ h2 {
 }
 
 .delete-btn {
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 0;
   border: none;
   background-color: transparent;
   color: #27256e;
@@ -168,6 +169,7 @@ footer {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 550px) {
   .city {
     flex-direction: column;
@@ -179,21 +181,39 @@ footer {
   .time {
     font-size: 2.5rem;
   }
+
+  .delete-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
-@media (max-width: 300px) {
-  h2 {
-    font-size: 0.5rem;
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
   }
 
-  date {
-    font-size: 0.2rem;
+  h2 {
+    font-size: 1rem;
+  }
+
+  .curr-time {
+    font-size: 2rem;
+  }
+
+  .date-time {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
   }
   .time {
-    font-size: 0.8rem;
+    font-size: 2rem;
   }
 
   .time small {
-    font-size: 0.4rem;
+    font-size: 1rem;
   }
 }
